@@ -1,0 +1,21 @@
+\documentclass{article}
+
+\usepackage{tabu}
+\usepackage{pbox}
+\usepackage[margin=1in]{geometry}
+
+\frenchspacing
+\setlength{\parskip}{1em}
+\renewcommand{\arraystretch}{1.5}
+
+\begin{document}
+
+\begin{tabu}{  l  X  X  }
+	\hline
+	Region & Condition & Properties \\ \hline
+	Saturation & \(V_{GS} > V_{th} \bigwedge V_{DS} > (V_{GS}-V_{th})\) &
+	\pbox{20cm}{ \(I_D = \frac{K}{2} (V_{GS}-V_{th})^2\) \\
+	\(g_m = \frac{2I_D}{V_{GS}-V_{th}}\) } \\ \hline
+\end{tabu}
+
+\end{document}
