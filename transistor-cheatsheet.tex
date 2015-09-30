@@ -5,6 +5,7 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{xcolor}
 \usepackage{amsmath}
+\usepackage{graphicx}
 
 \frenchspacing
 \setlength{\parskip}{1em}
@@ -53,9 +54,11 @@ For N-channel devices, all absolute value operations can be ignored.
 \vspace{5mm}
 Small signal characteristics (saturation only):
 
+\includegraphics[height=100pt]{MOSFET_Small_Signal.png}\footnote{Image by Brews ohare at English Wikipedia} % https://commons.wikimedia.org/wiki/File:MOSFET_Small_Signal.png
+
 \vspace{-5mm}
 \begin{itemize}
-	\item \(g_m = \frac{2I_D}{V_{OV}} = 2k|V_{OV}|\)
+	\item \(g_m = \frac{2I_D}{V_{OV}} = k|V_{OV}|\)
 	\item \(r_o = \frac{V_A}{I_D}\)
 \end{itemize}
 
