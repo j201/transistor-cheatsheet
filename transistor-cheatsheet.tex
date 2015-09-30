@@ -6,6 +6,7 @@
 \usepackage{xcolor}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{setspace}
 
 \frenchspacing
 \setlength{\parskip}{1em}
@@ -34,16 +35,16 @@ Large signal characteristics, \(k=k_n\) or \(k_p\) as appropriate:
 	\hline
 	Region & Condition & Properties \\ \hline
 	Saturation & \(|V_{GS}| > |V_{th}| \bigwedge |V_{DS}| \geq |V_{OV}|\) &
-	\pbox{20cm}{
+	\pbox{10cm}{
 		\vspace{1mm}
 		\(\begin{aligned}
-					I_D &= \frac{k}{2} V_{OV}^2 (1+\frac{V_{DS}}{|V_A|}) \\
-			   &\approx \frac{k}{2} V_{OV}^2
+					I_D &= \frac{k}{2} V_{OV}^2 (1+\frac{V_{DS}}{V_A}) \\
+					&\approx \frac{k}{2} V_{OV}^2
 		\end{aligned}\)
 	}\\
 
 	Triode & \(|V_{GS}| > |V_{th}| \bigwedge |V_{DS}| \leq |V_{OV}|\) &
-	\pbox{20cm}{ \(I_D = k(|V_{OV}|-\frac{1}{2}|V_{DS}|)|V_{DS}|\) } \\
+	\pbox{10cm}{ \(I_D = k(|V_{OV}|-\frac{1}{2}|V_{DS}|)|V_{DS}|\) } \\
 
 	Cutoff & \(|V_{GS}| \leq |V_{th}|\) & \(I_D = 0\)\\
 	\hline
@@ -62,4 +63,57 @@ Small signal characteristics (saturation only):
 	\item \(r_o = \frac{V_A}{I_D}\)
 \end{itemize}
 
+\section{BJTs}
+
+Definitions:
+
+\vspace{-5mm}
+\begin{itemize} \itemsep0pt
+	\item \(V_T \equiv \frac{kT}{q} \approx 25\text{mV}\)
+	\item \(\alpha \equiv \frac{\beta}{\beta + 1}\)
+\end{itemize}
+
+Large signal characteristics:
+
+\begin{tabu}{  l  X  X  }
+	\hline
+	Region & Condition & Properties \\ \hline
+
+	Saturation & Both junctions forward biased &
+	\pbox{10cm}{
+		\vspace{-5mm}
+		\setstretch{1.2}
+		\(|V_{BE}| \approx 0.7\text{V}\) \\
+		\(|V_{CE}| \approx 0.2\text{V}\) \\
+		\(|V_{BC}| \approx 0.5\text{V}\) \\
+		\(I_C = \beta_{forced} I_B\)
+	}
+	\\[-13mm]
+
+	Active & EB junction forward biased, CB junction reverse biased &
+	\pbox{10cm}{
+		\setstretch{1.3}
+		\(\begin{aligned}
+					I_C &= I_S e^{\frac{|V_{BE}|}{V_T}} (1 + \frac{V_{CE}}{V_A}) \\[-3mm]
+						   &\approx I_S e^{\frac{|V_{BE}|}{V_T}}
+		\end{aligned} \) \\
+		\(I_C = \beta I_B\) \\
+		\(I_E = \frac{I_C}{\alpha} = I_B + I_C\) \\
+		\(|V_{BE}| \text{is effectively limited at around 0.7V}\)
+	} \\[-5mm]
+
+	Cutoff & Both junctions reverse biased & \(I_C = I_B = 0\) \\[1mm]
+	\hline
+\end{tabu}
+
+For NPN devices, all absolute value operations can be ignored.
+
+\vspace{5mm}
+Small signal characteristics (active only):
+
+% \includegraphics[height=100pt]{}\footnote{}
+
+\vspace{-5mm}
+% \begin{itemize}
+% \end{itemize}
 \end{document}
