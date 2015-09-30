@@ -17,7 +17,7 @@
 
 \section{MOSFETs}
 
-Definitions:
+\textbf{Definitions:}
 
 \vspace{-5mm}
 \begin{itemize} \itemsep0pt
@@ -29,7 +29,7 @@ Definitions:
 	\item \(g_m \equiv \frac{\partial i_D}{\partial v_{GS}} = \frac{i_d}{v_{gs}}\)
 \end{itemize}
 
-Large signal characteristics, \(k=k_n\) or \(k_p\) as appropriate:
+\textbf{Large signal characteristics, \(k=k_n\) or \(k_p\) as appropriate:}
 
 \begin{tabu}{  l  X  X  }
 	\hline
@@ -53,7 +53,7 @@ Large signal characteristics, \(k=k_n\) or \(k_p\) as appropriate:
 For N-channel devices, all absolute value operations can be ignored.
 
 \vspace{5mm}
-Small signal characteristics (saturation only):
+\textbf{Small signal characteristics (saturation only):}
 
 \includegraphics[height=100pt]{MOSFET_Small_Signal.png}\footnote{Image by Brews ohare at English Wikipedia} % https://commons.wikimedia.org/wiki/File:MOSFET_Small_Signal.png
 
@@ -63,17 +63,19 @@ Small signal characteristics (saturation only):
 	\item \(r_o = \frac{V_A}{I_D}\)
 \end{itemize}
 
+\newpage
 \section{BJTs}
 
-Definitions:
+\textbf{Definitions:}
 
 \vspace{-5mm}
 \begin{itemize} \itemsep0pt
 	\item \(V_T \equiv \frac{kT}{q} \approx 25\text{mV}\)
 	\item \(\alpha \equiv \frac{\beta}{\beta + 1}\)
+	\item \(g_m \equiv \frac{\partial I_C}{\partial V_{BE}}\)
 \end{itemize}
 
-Large signal characteristics:
+\textbf{Large signal characteristics:}
 
 \begin{tabu}{  l  X  X  }
 	\hline
@@ -109,11 +111,15 @@ Large signal characteristics:
 For NPN devices, all absolute value operations can be ignored.
 
 \vspace{5mm}
-Small signal characteristics (active only):
+\textbf{Small signal characteristics (active only):}
 
-% \includegraphics[height=100pt]{}\footnote{}
+TODO: image
 
 \vspace{-5mm}
-% \begin{itemize}
-% \end{itemize}
+\begin{itemize}
+	\item \(g_m = \frac{I_C}{V_T}\)
+	\item \(r_{\pi} = \frac{\beta}{g_m} = \frac{V_T}{I_B}\)
+	\item \(r_o = \frac{V_A}{I_C}\)
+\end{itemize}
+
 \end{document}
