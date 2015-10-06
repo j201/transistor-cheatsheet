@@ -10,7 +10,7 @@ pdflatex transistor-cheatsheet.tex
 
 ###Requirements
 
-Latex with the following packages:
+Latex and pgf with the following packages:
 
 - tabu
 - geometry
@@ -19,6 +19,7 @@ Latex with the following packages:
 - amsmath
 - graphicx (provided in the 'graphics' package)
 - setspace
+- circuitikz
 
 ##Licence
 
