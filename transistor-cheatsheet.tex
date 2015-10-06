@@ -57,7 +57,21 @@ For N-channel devices, all absolute value operations can be ignored.
 \vspace{5mm}
 \textbf{Small signal characteristics (saturation only):}
 
-\includegraphics[height=100pt]{MOSFET_Small_Signal.png}\footnote{Image by Brews ohare at English Wikipedia} % https://commons.wikimedia.org/wiki/File:MOSFET_Small_Signal.png
+\begin{circuitikz}[american voltages] \draw
+		(0,2) node[anchor=east]{G}
+		to[short, o-] (1,2)
+		to[open, v<=\(v_{gs}\)] (1,0)
+		(1,0) -- (3,0)
+		to[short, -o] (3,-1)
+		node[anchor=east]{S}
+		(3,2) to[american controlled current source, l_=\(g_mv_{gs}\), -*] (3,0)
+		-- (5,0)
+		to[R, l=\(r_o\), -*] (5,2)
+		(3,2) -- (5,2)
+		to[short, -o] (6,2)
+		node[anchor=west]{D}
+;
+\end{circuitikz}
 
 \vspace{-5mm}
 \begin{itemize}
